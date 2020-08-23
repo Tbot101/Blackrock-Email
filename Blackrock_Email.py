@@ -15,9 +15,9 @@ def check_price():
     soup1 = BeautifulSoup(page.content, 'html.parser')
     soup2 = BeautifulSoup(soup1.prettify(), 'html.parser')
     global price
-    price = soup2.find(attrs={'class': 'font26 bold'}).get_text()
+    price = soup2.find(attrs={'class': 'font26 bold'}).get_text() #name of class is font26 bold
     global date
-    date = soup2.find(attrs={'class': 'rmk2 greya'}).get_text()
+    date = soup2.find(attrs={'class': 'rmk2 greya'}).get_text() #name of class is rmk2 greya
     print(price+" "+date)
 
 
